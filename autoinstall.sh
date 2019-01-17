@@ -27,6 +27,11 @@ install_vimrc() {
   ln -s "$INSTALL_TO/vimrc/vimrc" .vimrc
   ln -s "$INSTALL_TO/vimrc/vim" .vim
   touch ~/.vim/user.vim
+
+  # Install vim-plug
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
   
   echo "Installed and configured ~/.vim, have fun."
 }
